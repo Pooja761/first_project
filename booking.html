@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Hotel Form</title>
+  <script>
+    function trya(){
+      var uname = document.getElementById("username").value;
+      var msg = "Thank you!" + " " +uname + " " + "you have successfully booked a room."
+      // alert(msg)
+    
+      var uname = document.getElementById("username").value;
+      var lname = document.getElementById("username1").value;
+      var ename = document.getElementById("username2").value;
+      if ((uname=="" )&& (lname=="") && (ename=="" )){
+        alert("Name can't be blank");
+        return false;
+      }
+      else{
+        alert(msg)} 
+      
+    }
+  
+    
+    
+  </script>
+  <style>
+    h1,h4{color:rgb(27, 3, 85)}
+    span{color:white}
+    label{color:white}
+    body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(rgba(5, 5, 75, 0.5),rgba(0,0,50,0.5)), url(https://i.gifer.com/IJKQ.gif);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+  }
+  input, select {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 70px;
+    box-sizing: border-box;
+  }
+  button[type=submit] {
+    width: 10%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  button[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  
+  </style>
+</head>
+
+<body>
+  
+     <div>
+      <form action="/action_page.php" method="post">
+        <!-- <h1 style="text-align:center">Hotel Booking</h1><tr></tr> -->
+        <h1 style="text-align: center">HOTEL BOOKING FORM</h1>
+        <h4 style="text-align: center">We hope you will enjoy your stay.</h4>
+        <div class="wrap-input100 validate-input" data-validate="Name is required">
+          <span class="label-input100"><b>First Name* :&nbsp;&nbsp;<b></span>
+          <input class="input100" type="text" name="first_name" id = "username" placeholder="First Name" pattern="^[a-zA-Z]*$" maxlength="50" title="min. 5 character  do not use integer." required>
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100 validate-input" data-validate="Name is required">
+          <span class="label-input100">Last Name* :&nbsp;&nbsp;</span>
+          <input class="input100" type="text" name="last_name" id="username1"  placeholder="Last Name" pattern="^[a-zA-Z]*$" maxlength="50" title="min. 5 character  do not use integer." required>
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+          <span class="label-input100">Email* :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <input class="input100" type="text" name="email" id="username2" placeholder="Email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="50" title="format: abc@gmail.com" required>
+          <span class="focus-input100"></span>
+        </div>
+        <label for="rooms">Choose room:</label>
+
+<select id="rooms">
+  <option value="suite">Suite</option>
+  <option value="family room">Family room</option>
+  <option value="deluxe room">Deluxe room</option>
+  <option value="classic room">Classic room</option>
+  <option value="superior room">Superior room</option>
+  <option value="luxury room">Luxury room</option>
+  </select><br>
+  <label for="guest">Number of guest:</label>
+
+  <select id="rooms">
+    <option value="1 adult">1 Adult</option>
+    <option value="2 adult">2 Adult</option>
+    <option value="3 adult">3 Adult</option>
+    <option value="4 adult">4 Adult</option>
+    <option value="5 adult">5 Adult</option>
+    <option value="6 adult">6 Adult</option>
+    
+  </select><br>
+  
+    <label for="checkin">Check_in date:</label>
+    <input type="date" id="check_in date" name="check_in date"><br><br>
+     <label for="checkout">Check_out date:</label>
+      <input type="date" id="Check_out date" name="check_out date"><br>
+      <button type="submit" id="mySubmit" onclick="trya();" >SUBMIT</button> 
+      </form>
+    </div>
+</body>
+</html>
