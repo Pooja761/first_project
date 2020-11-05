@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hotel</title>
+    <script>
+      // Defining a function to display error message
+      function printError(elemId, hintMsg) {
+          document.getElementById(elemId).innerHTML = hintMsg;
+      }
+      
+      // Defining a function to validate form 
+      function validateForm() {
+          // Retrieving the values of form elements 
+          var name = document.contactForm.name.value;
+          var email = document.contactForm.email.value;
+          var mobile = document.contactForm.mobile.value;
+         
+          
+              
+          }
+          
+        // Defining error variables with a default value
+          var nameErr = emailErr = mobileErr = countryErr = genderErr = true;
+          
+          // Validate name
+          if(name == "") {
+              printError("nameErr", "Please enter your name");
+          } else {
+              var regex = /^[a-zA-Z\s]+$/;                
+              if(regex.test(name) === false) {
+                  printError("nameErr", "Please enter a valid name");
+              } else {
+                  printError("nameErr", "");
+                  nameErr = false;
+              }
+          }
+          
+          // Validate email address
+          if(email == "") {
+              printError("emailErr", "Please enter your email address");
+          } else {
+              // Regular expression for basic email validation
+              var regex = /^\S+@\S+\.\S+$/;
+              if(regex.test(email) === false) {
+                  printError("emailErr", "Please enter a valid email address");
+              } else{
+                  printError("emailErr", "");
+                  emailErr = false;
+              }
+          }
+          
+          // Validate mobile number
+          if(mobile == "") {
+              printError("mobileErr", "Please enter your mobile number");
+          } else {
+              var regex = /^[1-9]\d{9}$/;
+              if(regex.test(mobile) === false) {
+                  printError("mobileErr", "Please enter a valid 10 digit mobile number");
+              } else{
+                  printError("mobileErr", "");
+                  mobileErr = false;
+              }
+          }
+          
+          
+          
+         
+          if((nameErr || emailErr || mobileErr ) == true) {
+             return false;
+          } else {
+             
+              var dataPreview = "You've entered the following details: \n" +
+                                "Full Name: " + name + "\n" +
+                                "Email Address: " + email + "\n" +
+                                "Mobile Number: " + mobile + "\n" 
+                               
+                               
+              
+              }
+              // Display input data in a dialog box before submitting the form
+              alert(dataPreview);
+          
+    
+      </script>
+    <style>
+      * {
+  box-sizing: border-box;
+}
+
+
+.column0 {
+  float: left;
+  width: 25%;
+  padding: 20px;
+  height: 150px; 
+
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+        body {
+          margin: 0;
+          font-family: monospace, Helvetica, sans-serif;
+        }
+        
+        .topnav {
+          overflow: hidden;
+          background-color: black;
+        }
+        .hotelname {
+          float: left;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+
+        }
+        
+        .topnav a {
+          float: right;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+
+        
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        .topnav a.active {
+          background-color: grey;
+          color: white;
+        }
+        * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: 150px; 
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column1 {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 300px; 
+}
+.foot1{
+        background-color:rgb(117, 159, 172);
+        padding: 15px;
+        margin:10px;
+         display: block;
+    } 
+    .foot2{
+        background-color:rgb(117, 159, 172);
+        padding: 15px;
+        margin:10px;
+         display: block;
+    } 
+    
+    
+.boxes {
+        display: flex;
+        margin:0 7% 0;
+        padding: 10px;
+    }
+  
+    .box1 {
+        margin: 25px;
+        padding: 10px;
+        background-color:white;
+        
+    }
+    .box1 p {
+        text-align: center;
+    }
+    .imgs{
+        display: flex;
+        margin-left:15%;
+        margin-right:15%;
+    }
+    img{width: 300px;
+      height:300px;
+    }
+    #abc{
+      width: 100%;
+      height: 50%;
+    }
+    #xyz{
+      width: 220%;
+      height:100%;
+
+    }
+    body {
+    font-size: 16px;
+    background: #f9f9f9;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+form {
+    width: 300px;
+    background: #fff;
+    padding: 15px 40px 40px;
+    border: 1px solid #ccc;
+    margin: 50px auto 0;
+    border-radius: 5px;
+}
+label {
+    display: block;
+    margin-bottom: 5px
+}
+label i {
+    color: #999;
+    font-size: 80%;
+}
+input, select {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+.row {
+    padding-bottom: 10px;
+}
+.form-inline {
+    border: 1px solid #ccc;
+    padding: 8px 10px 4px;
+    border-radius: 2px;
+}
+.form-inline label, .form-inline input {
+    display: inline-block;
+    width: auto;
+    padding-right: 15px;
+}
+.error {
+    color: red;
+    font-size: 90%;
+}
+input[type="submit"] {
+    font-size: 110%;
+    font-weight: 100;
+    background: #006dcc;
+    border-color: #016BC1;
+    box-shadow: 0 3px 0 #0165b6;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background: #0165b6;
+}
+    
+       
+
+        </style>
+    
+</head>
+<body>
+    
+<div class="topnav">
+  
+    <a href="#contact">Contact</a>
+    <a href="#aboutus">About us</a>
+    <a href="#home">Home</a>
+  </div>
+  <img id="abc" src="https://cdn.home-designing.com/wp-content/uploads/2015/03/chevron-wallpaper.jpg" alt="luxury" width="100%" height="50%">
+ 
+
+  <div class="foot1">
+        <h1 style="text-align:center;">CONTACT TO BOOK ROOM</h1>
+    </div>
+ 
+  <h1 style=text-align:center>BOOK TO STAY</h1>
+  <h3 style=text-align:center>CONTACT ANY DAY ANY TIME</h3>
+  <div>
+    <h3><b>Contact Information</b></h3>
+  <div class="row">
+    <div class="column0" style="background-color:#ccc;">
+      
+      <label><b>Address:</b> <a href=# address>Okhla phase1 Near Govindpuri</a></label>
+      
+      
+    </div>
+    <div class="column0" style="background-color:#ccc;">
+      
+      <label><b>Phone:</b><a href=# phone>+ 1235 2355 98</a></label>
+      
+    </div>
+    <div class="column0" style="background-color:#ccc;">
+      
+      <label><b>Email:</b> <a href=#email> info@yoursite.com</a></a></label>
+     
+    </div>
+    <div class="column0" style="background-color:#ccc;">
+      
+      <p><b>Website:</b><a href=#yoursite.com>yoursite.com</a></p>
+    
+      
+    </div>
+    
+</div>
+<div class="boxes">
+  <div class="row">
+    <img id="xyz"src="https://lh3.googleusercontent.com/proxy/XQhwzLBinntNFJpp3PrN5XtGv8bDyjj-Vnxjt68EAU7lkeq6mzdi63cKWxwdopk67K-6MHkp0NCJ6Tn6zGlyq794a9N8Rrap9c7quE1yuoXq_w_te_u6WvEmJxE8tBrcPRVfohA0BD4Xfhsi3ggW8JpP" alt="vncb" width="100%" height ="200px">
+  </div>
+    
+    
+    <div class="box1">
+      <form name="contactForm" onsubmit="return validateForm()" action="/examples/actions/confirmation.php" method="post">
+        <h2>Send Message</h2>
+        <div class="row">
+            <label>Full Name</label>
+            <input type="text" name="name">
+            <div class="error" id="nameErr"></div>
+        </div>
+        <div class="row">
+            <label>Email Address</label>
+            <input type="text" name="email">
+            <div class="error" id="emailErr"></div>
+        </div>
+        <div class="row">
+            <label>Mobile Number</label>
+            <input type="text" name="mobile" maxlength="10">
+            <div class="error" id="mobileErr"></div>
+        </div>
+        
+        <div class="row">
+          <label>Message</label>
+           <textarea id="w3mission" rows="4" cols="28">
+           </textarea>
+           <div class="error" id="textErr"></div>
+           </div>
+          
+      
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    </div>
+
+</div>
+
+
+
+</div>
+<div class="row">
+  <div class="column1" style="background-color:rgb(117, 159, 172);">
+    <h2>Luxury Hotel</h2>
+    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-instagram"></a>
+  </div>
+  <div class="column1" style="background-color:rgb(117, 159, 172);">
+    <h2>Useful Links</h2>
+    <a href="#blog">Blog</a><br><br>
+    <a href="amenities">Amenities</a><br><br>
+    <a href="rooms">Rooms</a><br><br>
+    <a href="Gift Card">Gift Card</a>
+  </div>
+  <div class="column1" style="background-color:rgb(117, 159, 172);">
+    <h2>Privacy</h2>
+    <a href="#career">Career</a><br><br>
+    <a href="#about">About Us</a><br><br>
+    <a href="#contact">Contact Us</a><br><br>
+    <a href="#services">Services</a>
+  </div>
+  <div class="column1" style="background-color:rgb(117, 159, 172);">
+    <h2>Have a Questions?</h2>
+    <a href="#location"><i style='font-size:15px' class='fas'>&#xf3c5;</i> Okhla phase1 near Mobiloitte,New Delhi</a><br><br><br>
+    <a href="#contact"><i style='font-size:15px' class='fas'>&#xf2a0;</i>+919807654321</a><br><br><br>
+    <a href="#message"><i style="font-size:15px" class='fas'>&#xf0e0;</i>info@yourdomain.com</a>
+  </div>
+</div>
+<ul>
+<!--   
+  <li><a href="contact.html">booking</a></li> -->
+
+  </ul>
+</body>
+</html>
